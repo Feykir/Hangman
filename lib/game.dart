@@ -6,8 +6,8 @@ class Game {
   int incorrectGuesses = 0;
   Wordhandler wordHandler;
   String currentWord;
-  Diagram diagram = Diagram();
-  Inputhandler inputHandler = Inputhandler();
+  //Diagram diagram = Diagram();
+  //Inputhandler inputHandler = Inputhandler();
 
   Game(this.currentWord, this.wordHandler) {
     initializeGame();
@@ -23,9 +23,9 @@ class Game {
   playRound() {
     //TODO: Make the terminal screen clear each time.
     print(Process.runSync('clear', [], runInShell: true).stdout);
-    diagram.draw(incorrectGuesses);
+    //diagram.draw(incorrectGuesses);
     wordHandler.display();
-    String guess = inputHandler.getGuess();
+    //String guess = inputHandler.getGuess();
 
     if (wordHandler.checkChar(guess)) {
       wordHandler.addChar(guess);

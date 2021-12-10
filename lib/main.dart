@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-///IMPORTAN: "core/*" and "game.dart" are currently unused, will be integrated/removed later
+///IMPORTANT: "core/*" and "game.dart" are currently unused, will be integrated/removed later
 
 void main() => runApp(const Hangman());
 
@@ -28,10 +28,11 @@ class _GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-              //TODO:1 Add background image here (something thematic with hangman, wild west?)
-              image: AssetImage('TBD')),
+            //TODO:1B Figure out why image is not showing up as background
+            image: AssetImage('images/wild_west.png'),
+          ),
         ),
         child: SafeArea(
           child: Column(
